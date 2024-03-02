@@ -7,31 +7,31 @@ class Peices {
   }
   class Pawn extends Peices{
     constructor(){
-      super(color, color, this.isAlive);
+      super(color, type, this.isAlive);
     }
   }
   class Rook extends Peices{
     constructor(){
-      super(color, color, this.isAlive);
+      super(color, type, this.isAlive);
     }
   }
   class knight extends Peices{
     constructor(){
-      super(color, color, this.isAlive);
+      super(color, type, this.isAlive);
     }
   }
   class Bishop extends Peices{
     constructor(){
-      super(color, color, this.isAlive);
+      super(color, type, this.isAlive);
     }
   }
   class Queen extends Peices{
     constructor(){
-      super(color, color, this.isAlive);
+      super(color, type, this.isAlive);
     }
   }
   class King extends Peices{
     constructor(){
-      super(color, color, this.isAlive);
+      super(color, type, this.isAlive);
     }
   }
