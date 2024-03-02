@@ -1,14 +1,14 @@
 function makeWhitePieces(){
-    aPawnWhite = new Pawn(0, 0);
-    bPawnWhite = new Pawn(0, 0);
-    cPawnWhite = new Pawn(0, 0);
-    dPawnWhite = new Pawn(0, 0);
-    ePawnWhite = new Pawn(0, 0);
-    fPawnWhite = new Pawn(0, 0);
-    gPawnWhite = new Pawn(0, 0);
-    hPawnWhite = new Pawn(0, 0);
-    aRookWhite = new Rook(1, 0);
-    hRookWhite = new Rook(1, 0);
+    aPawnWhite = new Pawn(0, 0, [6, 0]);
+    bPawnWhite = new Pawn(0, 0, [6, 1]);
+    cPawnWhite = new Pawn(0, 0, [6, 2]);
+    dPawnWhite = new Pawn(0, 0, [6, 3]);
+    ePawnWhite = new Pawn(0, 0, [6, 4]);
+    fPawnWhite = new Pawn(0, 0, [6, 5]);
+    gPawnWhite = new Pawn(0, 0, [6, 6]);
+    hPawnWhite = new Pawn(0, 0, [6, 7]);
+    aRookWhite = new Rook(0, 0);
+    hRookWhite = new Rook(0, 0);
     bKnightWhite = new knight(2, 0);
     gKnightWhite = new knight(2, 0);
     cBishopWhite = new Bishop(3, 0);
@@ -18,16 +18,16 @@ function makeWhitePieces(){
 }
 
 function makeDarkPieces(){
-    aPawnBlack = new Pawn(0, 1);
-    bPawnBlack = new Pawn(0, 1);
-    cPawnBlack = new Pawn(0, 1);
-    dPawnBlack = new Pawn(0, 1);
-    ePawnBlack = new Pawn(0, 1);
-    fPawnBlack = new Pawn(0, 1);
-    gPawnBlack = new Pawn(0, 1);
-    hPawnBlack = new Pawn(0, 1);
-    aRookBlack = new Rook(1, 1);
-    hRookBlack = new Rook(1, 1);
+    aPawnBlack = new Pawn(0, 0, [1, 0]);
+    bPawnBlack = new Pawn(0, 0, [1, 1]);
+    cPawnBlack = new Pawn(0, 0, [1, 2]);
+    dPawnBlack = new Pawn(0, 0, [1, 3]);
+    ePawnBlack = new Pawn(0, 0, [1, 4]);
+    fPawnBlack = new Pawn(0, 0, [1, 5]);
+    gPawnBlack = new Pawn(0, 0, [1, 6]);
+    hPawnBlack = new Pawn(0, 0, [1, 7]);
+    aRookBlack = new Rook(0, 0);
+    hRookBlack = new Rook(0, 0);
     bKnightBlack = new knight(2, 1);
     gKnightBlack = new knight(2, 1);
     cBishopBlack = new Bishop(3, 1);
@@ -72,8 +72,15 @@ function setUpBoard(){
     board[0][6] = gKnightBlack;
     board[0][7] = hRookBlack;
 }
+function movePeice(piece, currentPosistionX, currentPosistionY, newPosistionX, newPosistionY){
+    aPawnWhite.movePeice(newPosistionX, newPosistionY);
+    board[currentPosistionX][currentPosistionY] = null;
+    board[newPosistionX][newPosistionY] = piece;
+
+}
 makeWhitePieces();
 makeDarkPieces();
 setUpBoard();
 
-console.log(board)
+console.log(board);
+
