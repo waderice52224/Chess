@@ -1,6 +1,6 @@
 .chessboard {
     border:4px solid #2f3a50;
-    width: 720px;
+    width: 560px;
 }
 
 .row {
@@ -8,13 +8,32 @@
 }
 
 .black-box {
-    width: 90px;
-    height:90px;
+    width: 70px;
+    height:70px;
     background-color: #2f3a50;
 }
 
 .white-box {
-    width:90px;
-    height: 90px;
+    width:70px;
+    height: 70px;
     background-color: white;
+}
+#a8 {
+    background-image: url(PieceImages/black-rook.png);
+    background-size:cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#a7 {
+    background-image: url(PieceImages/black-pawn.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#b8 {
+    background-image: url(PieceImages/black-king.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
