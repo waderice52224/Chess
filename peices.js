@@ -1,10 +1,14 @@
   class Pawn{
-    constructor(color, type){
+    constructor(color, type, posistion){
       this.color = color
       this.type = type
+      this.posistion = posistion;
     }
     get Type(){
       return this.type;
+    }
+    movePeice(x, y){
+      this.posistion = [x, y]
     }
   }
   class Rook{
@@ -52,3 +56,4 @@
       return this.type;
     }
   }
+  
