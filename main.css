@@ -1,0 +1,15 @@
+.row {
+    display:flex;
+}
+
+.black-box {
+    width: 100px;
+    height:100px;
+    background-color: black;
+}
+
+.white-box {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
